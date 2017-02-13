@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>recipes</title>
+    <title>pecipes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button1.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/modernizr.custom.js"></script>
 </head>
 
 <body>
-    <div></div>
-    <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
+    <nav class="header navbar navbar-default navbar-fixed-top">
+        <div class="container ha-header-perspective">
             <div class="navbar-header">
                 <a class="navbar-brand navbar-link" href="#"><img class="img-responsive" src="assets/img/logo.png"></a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -29,7 +29,7 @@
             </div>
         </div>
     </nav>
-    <section id="banner" class="banner">
+    <section id="banner" class="banner ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-large">
         <div class="jumbotron">
             <p>Find your Favorite </p>
             <h1>RECIPES </h1>
@@ -176,6 +176,18 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/waypoints.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 1){
+                $('.header').addClass("sticky");
+            }
+            else{
+                $('.header').removeClass("sticky");
+            }
+        });
+    </script>
 </body>
 
 </html>
